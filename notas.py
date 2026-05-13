@@ -13,13 +13,15 @@ def mostrar_notas(lista):
 
 
 def eliminar_nota(lista):
-    mostrar_notas(lista)
+        mostrar_notas(lista)
+        if len(lista) > 0:
+            try:
+                indice = int(input("Número de nota a eliminar: ")) - 1
+                if 0 <= indice < len(lista):
+                    lista.pop(indice)
+                    print("Nota eliminada con éxito.")
+                else:
+                    print("Error: El número no existe en la lista.")
+            except ValueError:
+                print("Error: Debes introducir un número válido.")
 
-    if len(lista) > 0:
-        indice = int(input("Número de nota a eliminar: ")) - 1
-
-        if 0 <= indice < len(lista):
-            lista.pop(indice)
-            print("Nota eliminada")
-        else:
-            print("Número incorrecto")

@@ -4,18 +4,21 @@ def agregar_nota(lista, texto):
 
 
 def mostrar_notas(lista):
-    if len(lista) == 0:
-        print("No hay notas guardadas")
+    if not lista:
+        print(" Sin notas guardadas.")
     else:
-        print("\nLISTA DE NOTAS")
+        print("\n" + "─" * 30)
+        print(f"{'ID':<4} | {'CONTENIDO'}")
+        print("─" * 30)
         for i, nota in enumerate(lista):
-            print(f"{i + 1}. {nota}")
+            print(f"{i + 1:<4} | {nota}")
+        print("─" * 30)
 
 
 def eliminar_nota(lista):
     if not lista:
         print("La lista está vacía, nada que eliminar.")
-        return # Salir de la función inmediatamente
+        return # Salir deg la función inmediatamente
     
     mostrar_notas(lista)
     if len(lista) > 0:

@@ -25,3 +25,6 @@ def eliminar_nota(lista):
             except ValueError:
                 print("Error: Debes introducir un número válido.")
 
+def vaciar_notas(lista):
+        lista.clear()
+        print("Todas las notas han sido eliminadas.")

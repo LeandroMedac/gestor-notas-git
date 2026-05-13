@@ -1,4 +1,4 @@
-from notas import agregar_nota, mostrar_notas, eliminar_nota
+from notas import agregar_nota, mostrar_notas, eliminar_nota, vaciar_notas
 
 notas = []
 
@@ -8,6 +8,7 @@ while True:
     print("2. Mostrar")
     print("3. Eliminar")
     print("4. Salir")
+    print("5. Vaciar todo")
 
     opcion = input("¿Opción?: ")
 
@@ -24,6 +25,8 @@ while True:
     elif opcion == "4":
         print("Programa finalizado")
         break
-
+    elif opcion == "5":
+        vaciar_notas(notas)
+        break
     else:
         print("Opción incorrecta")

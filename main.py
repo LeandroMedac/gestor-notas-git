@@ -3,13 +3,13 @@ from notas import agregar_nota, mostrar_notas, eliminar_nota
 notas = []
 
 while True:
-    print("\n--- GESTOR DE NOTAS ---")
-    print("1. Añadir nota")
-    print("2. Mostrar notas")
-    print("3. Eliminar nota")
+    print("\n--- Gestión ---")
+    print("1. Añadir")
+    print("2. Mostrar")
+    print("3. Eliminar")
     print("4. Salir")
 
-    opcion = input("Selecciona una opción: ")
+    opcion = input("¿Opción?: ")
 
     if opcion == "1":
         texto = input("Introduce la nota: ")

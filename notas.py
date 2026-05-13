@@ -13,8 +13,12 @@ def mostrar_notas(lista):
 
 
 def eliminar_nota(lista):
-        mostrar_notas(lista)
-        if len(lista) > 0:
+    if not lista:
+        print("La lista está vacía, nada que eliminar.")
+        return # Salir de la función inmediatamente
+    
+    mostrar_notas(lista)
+    if len(lista) > 0:
             try:
                 indice = int(input("Número de nota a eliminar: ")) - 1
                 if 0 <= indice < len(lista):
